@@ -1,0 +1,53 @@
+/* Reset & base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container to hold everything */
+.welcome-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fullscreen video */
+.grill-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 3s ease-in;
+    z-index: -1;
+}
+
+/* Fade in class for animation */
+.fade-in .grill-video {
+    opacity: 1;
+}
+
+/* Start button styles */
+.start-button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 36px;
+    font-size: 1.3rem;
+    border-radius: 2rem;
+    opacity: 0.95;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.start-button:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
